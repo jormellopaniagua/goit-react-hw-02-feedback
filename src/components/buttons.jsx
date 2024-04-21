@@ -32,7 +32,9 @@ export default class Buttons extends Component {
   countPositiveFeedbackPercentage = () => {
     const { good } = this.state;
     const totalFeedback = this.countTotalFeedback();
-    return totalFeedback > 0 ? Math.round((good / totalFeedback) * 100) : 0;
+    const positivePercentage =
+      totalFeedback > 0 ? (good / totalFeedback) * 100 : 0;
+    return positivePercentage;
   };
 
   render() {
@@ -54,7 +56,7 @@ export default class Buttons extends Component {
             <p>Total: {this.countTotalFeedback()}</p>
             <p>
               Positive feedback percentage:{' '}
-              {this.countPositiveFeedbackPercentage()}%
+              {this.countPositiveFeedbackPercentage.math.round()}%
             </p>
           </div>
         ) : (
