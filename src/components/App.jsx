@@ -3,6 +3,7 @@ import Statistics from './statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Section from './section';
 import PropTypes from 'prop-types';
+import Page from './styledComponents/Page';
 export class App extends Component {
   constructor(props) {
     // Constructor de la clase App que recibe props
@@ -32,7 +33,7 @@ export class App extends Component {
     const { feedback } = this.state; // Extrae el objeto feedback del estado
 
     return (
-      <div>
+      <Page>
         <h1>Expresso Café Feedback</h1>
         <Section title="">
           <FeedbackOptions onLeaveFeedback={this.handleFeedback} />
@@ -40,7 +41,7 @@ export class App extends Component {
         <Section title="">
           <Statistics feedback={feedback} />
         </Section>
-      </div> // Cierra el div principal
+      </Page> // Cierra el div principal
     );
   }
 }

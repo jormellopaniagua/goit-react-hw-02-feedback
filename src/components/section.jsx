@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 const Section = ({ title, children }) => {
   return (
-    <React.Fragment>
+    <>
       <h2>{title}</h2>
       {children}
-    </React.Fragment>
+    </>
   );
 };
 
